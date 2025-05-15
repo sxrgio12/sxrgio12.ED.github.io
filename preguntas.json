@@ -1,5 +1,5 @@
 [
-      {
+{
     "pregunta": "¿Qué representa un IDE?",
     "opciones": ["Una base de datos", "Un entorno de desarrollo integrado", "Un lenguaje de programación"],
     "respuesta": "Un entorno de desarrollo integrado"
@@ -479,4 +479,4 @@
     "opciones": ["print()", "write()", "System.out.println()"],
     "respuesta": "System.out.println()"
   }
-    ]
+]
