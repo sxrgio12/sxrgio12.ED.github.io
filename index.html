@@ -268,7 +268,7 @@
 
    async function iniciarTest() {
   try {
-    const res = await fetch("preguntas.json");
+    const res = await fetch("preguntased.json");
     preguntasOriginales = await res.json();
     totalPreguntasTotales = preguntasOriginales.length;
 
