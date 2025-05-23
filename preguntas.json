@@ -1,482 +1,623 @@
 [
-{
-    "pregunta": "¿Qué representa un IDE?",
-    "opciones": ["Una base de datos", "Un entorno de desarrollo integrado", "Un lenguaje de programación"],
-    "respuesta": "Un entorno de desarrollo integrado"
-  },
-  {
-    "pregunta": "¿Cuál de las siguientes opciones es una ventaja del uso de entornos integrados de desarrollo?",
-    "opciones": ["Reducción de errores de sintaxis", "Requiere más memoria", "Solo sirve para un lenguaje"],
-    "respuesta": "Reducción de errores de sintaxis"
-  },
-  {
-    "pregunta": "¿Qué tipo de herramienta es Eclipse?",
-    "opciones": ["Compilador", "Editor de texto", "IDE"],
-    "respuesta": "IDE"
-  },
-  {
-    "pregunta": "¿Cuál de las siguientes no es una característica común de los IDE?",
-    "opciones": ["Depuración", "Compilación", "Gestión de redes"],
-    "respuesta": "Gestión de redes"
-  },
-  {
-    "pregunta": "¿Qué es el control de versiones?",
-    "opciones": ["Un método para crear nuevas versiones del sistema operativo", "Una técnica para rastrear cambios en el código", "Una forma de compilar proyectos grandes"],
-    "respuesta": "Una técnica para rastrear cambios en el código"
-  },
-  {
-    "pregunta": "¿Qué sistema de control de versiones es distribuido?",
-    "opciones": ["CVS", "Subversion", "Git"],
-    "respuesta": "Git"
-  },
-  {
-    "pregunta": "¿Cuál de los siguientes comandos de Git se usa para subir cambios al repositorio remoto?",
-    "opciones": ["git push", "git pull", "git init"],
-    "respuesta": "git push"
-  },
-  {
-    "pregunta": "¿Qué comando de Git se usa para clonar un repositorio remoto?",
-    "opciones": ["git start", "git clone", "git copy"],
-    "respuesta": "git clone"
-  },
   {
-    "pregunta": "¿Qué es un repositorio en Git?",
-    "opciones": ["Una copia del sistema operativo", "Un conjunto de archivos con historial de versiones", "Una carpeta de usuario local"],
-    "respuesta": "Un conjunto de archivos con historial de versiones"
+    "pregunta": "Las mejores pruebas para realizar mientras estamos refactorizando son…:",
+    "respuesta": "Las pruebas unitarias.",
+    "opciones": [
+      "Ninguna de las dos, da igual.",
+      "Las pruebas de integración.",
+      "Las pruebas unitarias."
+    ]
   },
-  {
-    "pregunta": "¿Qué representa el símbolo ~ en UML?",
-    "opciones": ["Privado", "Protegido", "Paquete"],
-    "respuesta": "Paquete"
+  {
+    "pregunta": "¿Cuál es uno de los principales beneficios de la refactorización en Java?:",
+    "respuesta": "Mejorar la legibilidad, mantenibilidad y calidad del código",
+    "opciones": [
+      "Añadir nuevas características al software",
+      "Aumentar la velocidad de ejecución del programa",
+      "Mejorar la legibilidad, mantenibilidad y calidad del código"
+    ]
+  },
+  {
+    "pregunta": "¿Qué tipo de sistema de control de versiones es CVS?:",
+    "respuesta": "Centralizado",
+    "opciones": [ "Distribuido", "Centralizado", "Basado en la nube" ]
   },
   {
-    "pregunta": "¿Qué se entiende por clase abstracta?",
-    "opciones": ["Una clase que no puede tener atributos", "Una clase que no puede instanciarse", "Una clase con solo métodos estáticos"],
-    "respuesta": "Una clase que no puede instanciarse"
+    "pregunta": "¿Por qué es importante la gestión de contenido en una organización?:",
+    "respuesta": "Para facilitar la colaboración, el acceso y la recuperación de información relevante",
+    "opciones": [
+      "Para aumentar el costo de almacenamiento de documentos",
+      "Para facilitar la colaboración, el acceso y la recuperación de información relevante",
+      "Para dificultar la búsqueda de información"
+    ]
   },
   {
-    "pregunta": "¿Qué diagrama de UML muestra la interacción entre objetos en el tiempo?",
-    "opciones": ["Diagrama de casos de uso", "Diagrama de clases", "Diagrama de secuencia"],
-    "respuesta": "Diagrama de secuencia"
+    "pregunta": "¿Qué es GitHub en el contexto del control de versiones?:",
+    "respuesta": "Una plataforma de desarrollo colaborativo basada en Git",
+    "opciones": [
+      "Una herramienta de depuración",
+      "Una plataforma de desarrollo colaborativo basada en Git",
+      "Un sistema de control de versiones centralizado"
+    ]
   },
   {
-    "pregunta": "¿Cuál es el propósito de la herencia en POO?",
-    "opciones": ["Evitar errores", "Reutilizar código", "Crear variables globales"],
-    "respuesta": "Reutilizar código"
+    "pregunta": "¿Qué es el control de versiones en el desarrollo de software?:",
+    "respuesta": "Un proceso para gestionar cambios en el código fuente a lo largo del tiempo",
+    "opciones": [
+      "Una técnica para ocultar el código fuente",
+      "Un proceso para gestionar cambios en el código fuente a lo largo del tiempo",
+      "Un método para compilar y ejecutar programas"
+    ]
   },
   {
-    "pregunta": "¿Qué operador se usa para indicar herencia en Java?",
-    "opciones": ["extends", "implements", "inherits"],
-    "respuesta": "extends"
+    "pregunta": "¿Qué es Alfresco en el contexto de la gestión de contenido empresarial (ECM)?:",
+    "respuesta": "Un sistema de gestión de documentos de código abierto",
+    "opciones": [
+      "Un procesador de texto",
+      "Un sistema de gestión de documentos de código abierto",
+      "Una plataforma de redes sociales"
+    ]
   },
   {
-    "pregunta": "¿Qué palabra clave se usa para implementar una interfaz en Java?",
-    "opciones": ["extends", "inherits", "implements"],
-    "respuesta": "implements"
+    "pregunta": "Fomenta el uso de mejores métodos de codificación, dando énfasis a métodos discretos y reutilizables es una ventaja propia de…:",
+    "respuesta": "extraer método.",
+    "opciones": [ "extraer método.", "métodos en línea.", "pruebas de regresión." ]
   },
   {
-    "pregunta": "¿Qué se representa en un diagrama de clases?",
-    "opciones": ["La secuencia de eventos", "Las clases, atributos, métodos y relaciones", "Los actores y casos de uso"],
-    "respuesta": "Las clases, atributos, métodos y relaciones"
+    "pregunta": "¿Qué es Nuxeo en el contexto de la gestión de contenido empresarial (ECM)?:",
+    "respuesta": "Una plataforma de ECM de código abierto",
+    "opciones": [
+      "Un lenguaje de programación",
+      "Una herramienta de diseño gráfico",
+      "Una plataforma de ECM de código abierto"
+    ]
   },
   {
-    "pregunta": "¿Qué tipo de relación se representa con una línea con rombo vacío en UML?",
-    "opciones": ["Asociación", "Agregación", "Composición"],
-    "respuesta": "Agregación"
+    "pregunta": "¿Cuál es uno de los objetivos principales de las herramientas de gestión de contenido como Alfresco, Athento y Nuxeo?:",
+    "respuesta": "Ayudar a las organizaciones a administrar y controlar su contenido de manera eficiente",
+    "opciones": [
+      "Facilitar la gestión de proyectos de construcción",
+      "Ayudar a las organizaciones a administrar y controlar su contenido de manera eficiente",
+      "Realizar análisis de mercado"
+    ]
   },
   {
-    "pregunta": "¿Qué es una excepción en Java?",
-    "opciones": ["Un valor nulo", "Un error que ocurre en tiempo de compilación", "Un evento que altera el flujo normal del programa"],
-    "respuesta": "Un evento que altera el flujo normal del programa"
+    "pregunta": "¿Cuál es el riesgo potencial de realizar refactorizaciones sin pruebas unitarias adecuadas?:",
+    "respuesta": "Introducir errores en el código sin darse cuenta",
+    "opciones": [
+      "Las refactorizaciones siempre son seguras, no hay riesgos",
+      "Introducir errores en el código sin darse cuenta",
+      "Mejorar significativamente el rendimiento del programa"
+    ]
   },
   {
-    "pregunta": "¿Cuál es el paquete principal para manejo de excepciones en Java?",
-    "opciones": ["java.util", "java.io", "java.lang"],
-    "respuesta": "java.lang"
+    "pregunta": "¿Cómo pueden los comentarios en el código ayudar en la detección temprana de errores?:",
+    "respuesta": "Al aclarar la intención del código, lo que facilita la identificación de posibles problemas",
+    "opciones": [
+      "Al proporcionar soluciones instantáneas a los errores",
+      "Al aclarar la intención del código, lo que facilita la identificación de posibles problemas",
+      "Los comentarios no están relacionados con la detección de errores"
+    ]
   },
   {
-    "pregunta": "¿Qué palabra clave se utiliza para capturar una excepción?",
-    "opciones": ["try", "catch", "throw"],
-    "respuesta": "catch"
+    "pregunta": "En un sistema de control de versiones que no hay un repositorio central se trata de los...:",
+    "respuesta": "Distribuidos.",
+    "opciones": [ "Centralizados.", "Distribuidos.", "ninguno de los dos." ]
   },
   {
-    "pregunta": "¿Qué hace el bloque finally en Java?",
-    "opciones": ["Ejecuta código después del catch", "Ignora errores", "Define la excepción"],
-    "respuesta": "Ejecuta código después del catch"
+    "pregunta": "Los diagramas de clases se especifican:",
+    "respuesta": "Con notación UML.",
+    "opciones": [
+      "Cualquier lenguaje de programación.",
+      "Con notación UML.",
+      "Con cualquier lenguaje de programación."
+    ]
   },
   {
-    "pregunta": "¿Qué representa la palabra clave throw?",
-    "opciones": ["Crear una excepción nueva", "Ignorar una excepción", "Capturar una excepción"],
-    "respuesta": "Crear una excepción nueva"
+    "pregunta": "Si el atributo o método en un diagrama de clase tiene el símbolo # este va a ser…:",
+    "respuesta": "protegido.",
+    "opciones": [ "publico.", "protegido.", "privado." ]
   },
   {
-    "pregunta": "¿Qué clase se usa para capturar excepciones generales en Java?",
-    "opciones": ["Exception", "Throwable", "IOException"],
-    "respuesta": "Exception"
+    "pregunta": "Una flecha punteada entre dos clases indica una…:",
+    "respuesta": "instanciación.",
+    "opciones": [ "composición.", "instanciación.", "agregación." ]
   },
   {
-    "pregunta": "¿Qué diferencia hay entre checked y unchecked exceptions?",
-    "opciones": ["Las checked se deben manejar obligatoriamente", "Las unchecked son errores de sintaxis", "Las checked son más comunes"],
-    "respuesta": "Las checked se deben manejar obligatoriamente"
+    "pregunta": "La parte inferior de una clase indica…:",
+    "respuesta": "los métodos.",
+    "opciones": [ "el nombre.", "los atributos.", "los métodos." ]
   },
   {
-    "pregunta": "¿Qué permite una herramienta de integración continua?",
-    "opciones": ["Eliminar ramas en Git", "Compilar código automáticamente", "Crear interfaces gráficas"],
-    "respuesta": "Compilar código automáticamente"
+    "pregunta": "Si el atributo o método en un diagrama de clase tiene el símbolo + este va a ser…:",
+    "respuesta": "publico.",
+    "opciones": [ "publico.", "protegido.", "privado." ]
   },
   {
-    "pregunta": "¿Qué es Jenkins?",
-    "opciones": ["Un framework de Java", "Una herramienta de integración continua", "Un sistema operativo"],
-    "respuesta": "Una herramienta de integración continua"
+    "pregunta": "Para que la herencia sea clara debe responder a la afirmación…:",
+    "respuesta": "A la afirmación “es-un”.",
+    "opciones": [
+      "A la afirmación “es-un”.",
+      "A la afirmación “se corresponde con”.",
+      "Ninguna afirmación."
+    ]
   },
   {
-    "pregunta": "¿Cuál es la función del comando javac?",
-    "opciones": ["Ejecutar programas Java", "Compilar programas Java", "Eliminar código"],
-    "respuesta": "Compilar programas Java"
+    "pregunta": "UML es un lenguaje…:",
+    "respuesta": "gráfico.",
+    "opciones": [ "gráfico.", "orientado a objetos.", "estructurado." ]
   },
   {
-    "pregunta": " formato se usa para describir interfaces en JavaFX?",
-    "opciones": ["HTML", "FXML", "JSON"],
-    "respuesta": "FXML"
+    "pregunta": "Cuando se componen objetos que son instancias de una clase por referencia, también se le denomina…:",
+    "respuesta": "agregación.",
+    "opciones": [ "composición.", "agregación.", "estática." ]
   },
   {
-    "pregunta": "¿Qué componente de JavaFX representa una caja de texto?",
-    "opciones": ["Label", "TextArea", "TextField"],
-    "respuesta": "TextField"
+    "pregunta": "Cuando un método o atributo es público será visible…:",
+    "respuesta": "Dentro y fuera de la clase.",
+    "opciones": [
+      "Desde cualquier clase hija.",
+      "Sólo dentro de la clase.",
+      "Dentro y fuera de la clase."
+    ]
   },
   {
-    "pregunta": "¿Qué clase en Java se usa para trabajar con fechas y horas modernas?",
-    "opciones": ["Date", "Calendar", "LocalDateTime"],
-    "respuesta": "LocalDateTime"
+    "pregunta": "La agregación por valor es un tipo de relación…:",
+    "respuesta": "Estática.",
+    "opciones": [ "Estática.", "Dinámica.", "Por referencia." ]
   },
   {
-    "pregunta": "¿Qué comando se usa en Git para ver el historial de commits?",
-    "opciones": ["git status", "git history", "git log"],
-    "respuesta": "git log"
+    "pregunta": "¿Cuál es el propósito principal de un diagrama de clase?:",
+    "respuesta": "Modelar las clases y relaciones en un sistema.",
+    "opciones": [
+      "Visualizar datos en una base de datos.",
+      "Modelar las clases y relaciones en un sistema.",
+      "Mostrar el flujo de control en un programa."
+    ]
   },
   {
-    "pregunta": "¿Qué comando crea un nuevo repositorio en Git?",
-    "opciones": ["git create", "git init", "git add"],
-    "respuesta": "git init"
+    "pregunta": "En la representación de la clase, la parte intermedia del gráfico representa…:",
+    "respuesta": "Los atributos.",
+    "opciones": [ "Los atributos.", "Los métodos.", "El nombre de la clase." ]
   },
   {
-    "pregunta": "¿Qué se logra con la integración continua?",
-    "opciones": ["Pruebas automáticas y despliegue continuo", "División del código", "Solo validación de formularios"],
-    "respuesta": "Pruebas automáticas y despliegue continuo"
+    "pregunta": "Si un atributo o método es visible solo dentro de la clase, este será…:",
+    "respuesta": "privado.",
+    "opciones": [ "publico.", "protegido.", "privado." ]
   },
   {
-    "pregunta": "¿Qué es Maven?",
-    "opciones": ["Un compilador", "Un sistema de control de versiones", "Una herramienta de gestión de proyectos Java"],
-    "respuesta": "Una herramienta de gestión de proyectos Java"
+    "pregunta": "¿Qué elemento se utiliza para conectar actores y casos de uso en un diagrama de casos de uso?:",
+    "respuesta": "Flechas",
+    "opciones": [ "Flechas", "Líneas sólidas", "Líneas punteadas" ]
   },
   {
-    "pregunta": "¿Qué tipo de lenguaje es XML?",
-    "opciones": ["De programación", "De marcado", "Compilado"],
-    "respuesta": "De marcado"
+    "pregunta": "El diagrama encargado de modelar el comportamiento de los casos de uso, objetos u operaciones es…:",
+    "respuesta": "El diagrama de actividad.",
+    "opciones": [
+      "El diagrama de casos de uso.",
+      "El diagrama de colaboración.",
+      "El diagrama de actividad."
+    ]
   },
   {
-    "pregunta": "¿Qué representa la palabra clave `super` en Java?",
-    "opciones": ["Una constante", "Acceso a la clase padre", "Creación de objetos"],
-    "respuesta": "Acceso a la clase padre"
+    "pregunta": "El uso de una flecha simple en el diagrama de casos de uso representa…:",
+    "respuesta": "asociación.",
+    "opciones": [ "exclusión.", "asociación.", "inclusión." ]
   },
   {
-    "pregunta": "¿Qué significa que un método sea `abstract`?",
-    "opciones": ["Está implementado en la clase", "Debe implementarse en las subclases", "Es privado"],
-    "respuesta": "Debe implementarse en las subclases"
+    "pregunta": "¿Qué representan las flechas en un diagrama de secuencia?:",
+    "respuesta": "Mensajes entre objetos.",
+    "opciones": [
+      "Transiciones de estados.",
+      "Mensajes entre objetos.",
+      "Relaciones de herencia."
+    ]
   },
   {
-    "pregunta": "¿Cuál es la extensión de un archivo Java compilado?",
-    "opciones": [".java", ".javac", ".class"],
-    "respuesta": ".class"
+    "pregunta": "¿Qué tipo de diagrama se utiliza comúnmente para modelar el comportamiento de un objeto a lo largo del tiempo?:",
+    "respuesta": "Diagrama de estados",
+    "opciones": [
+      "Diagrama de secuencia",
+      "Diagrama de actividad",
+      "Diagrama de estados"
+    ]
   },
   {
-    "pregunta": "¿Qué herramienta de JavaFX define interfaces gráficas?",
-    "opciones": ["SceneBuilder", "FXMLViewer", "JCreator"],
-    "respuesta": "SceneBuilder"
+    "pregunta": "El diagrama de secuencia da detalle a…:",
+    "respuesta": "los casos de uso.",
+    "opciones": [
+      "el diagrama de actividad.",
+      "los casos de uso.",
+      "el diagrama de clases."
+    ]
   },
   {
-    "pregunta": "¿Qué palabra clave se usa para heredar de una clase en Java?",
-    "opciones": ["inherits", "extends", "implements"],
-    "respuesta": "extends"
+    "pregunta": "¿Qué tipo de diagrama se utiliza para representar el flujo de control de actividades dentro de un proceso o función?:",
+    "respuesta": "Diagrama de actividad",
+    "opciones": [
+      "Diagrama de secuencia",
+      "Diagrama de actividad",
+      "Diagrama de colaboración"
+    ]
   },
   {
-    "pregunta": "¿Qué indica la notación `<<interface>>` en un diagrama UML?",
-    "opciones": ["Una clase abstracta", "Una interfaz", "Una librería"],
-    "respuesta": "Una interfaz"
+    "pregunta": "El uso de una flecha hueca en el diagrama de casos de uso representa…:",
+    "respuesta": "Generalización.",
+    "opciones": [ "Generalización.", "Inclusión.", "Asociación" ]
   },
   {
-    "pregunta": "¿Qué es una relación de dependencia en UML?",
-    "opciones": ["Una clase que contiene otra", "Una clase que usa otra", "Una clase que hereda de otra"],
-    "respuesta": "Una clase que usa otra"
+    "pregunta": "El diagrama encargado de modelar interacciones entre objetos es…:",
+    "respuesta": "El diagrama de colaboración.",
+    "opciones": [
+      "El diagrama de casos de uso.",
+      "El diagrama de colaboración.",
+      "El diagrama de actividad."
+    ]
   },
   {
-    "pregunta": "¿Qué tipo de relación representa un diamante sólido en UML?",
-    "opciones": ["Agregación", "Composición", "Herencia"],
-    "respuesta": "Composición"
+    "pregunta": "En los diagramas de caso de uso, las relaciones de los casos de uso que van seguidos de otro caso de uso de forma secuencial se denomina…:",
+    "respuesta": "Inclusión.",
+    "opciones": [ "Asociación.", "Exclusión.", "Inclusión." ]
   },
   {
-    "pregunta": "¿Qué comando de Git se usa para ver archivos modificados?",
-    "opciones": ["git log", "git status", "git branch"],
-    "respuesta": "git status"
+    "pregunta": "UML es …:",
+    "respuesta": "una notación.",
+    "opciones": [ "una notación.", "un programa.", "un entorno de desarrollo." ]
   },
   {
-    "pregunta": "¿Qué representa una rama en Git?",
-    "opciones": ["Una carpeta", "Una línea de desarrollo", "Una versión fija"],
-    "respuesta": "Una línea de desarrollo"
+    "pregunta": "¿Qué elemento se utiliza para representar una transición entre estados en un diagrama de estados?:",
+    "respuesta": "Flecha continua",
+    "opciones": [ "Flecha continua", "Rectángulo", "Línea con etiqueta" ]
   },
   {
-    "pregunta": "¿Qué hace `git merge`?",
-    "opciones": ["Fusiona ramas", "Crea commits", "Elimina cambios"],
-    "respuesta": "Fusiona ramas"
+    "pregunta": "La interacción de un conjunto de objetos de una aplicación a través del tiempo se denomina…:",
+    "respuesta": "diagrama de secuencia.",
+    "opciones": [
+      "diagrama de colaboración.",
+      "diagrama de casos de uso.",
+      "diagrama de secuencia."
+    ]
   },
   {
-    "pregunta": "¿Qué hace el comando `git pull`?",
-    "opciones": ["Sube cambios", "Borra archivos", "Actualiza el repositorio local con cambios remotos"],
-    "respuesta": "Actualiza el repositorio local con cambios remotos"
+    "pregunta": "¿Qué elemento se utiliza para representar mensajes entre objetos en un diagrama de secuencia?:",
+    "respuesta": "Flechas con etiquetas",
+    "opciones": [ "Flechas", "Líneas sólidas", "Flechas con etiquetas" ]
   },
   {
-    "pregunta": "¿Qué es `README.md`?",
-    "opciones": ["Un archivo de configuración", "Un archivo de texto con información del proyecto", "Un ejecutable"],
-    "respuesta": "Un archivo de texto con información del proyecto"
+    "pregunta": "La gestión documental se puede realizar con el software…:",
+    "respuesta": "Ambas son correctas.",
+    "opciones": [ "Sharepoint.", "Alfresco.", "Ambas son correctas." ]
   },
   {
-    "pregunta": "¿Qué es un commit en Git?",
-    "opciones": ["Un cambio guardado con un mensaje", "Una carpeta temporal", "Una rama alternativa"],
-    "respuesta": "Un cambio guardado con un mensaje"
+    "pregunta": "CVS versiona...:",
+    "respuesta": "ficheros.",
+    "opciones": [ "ficheros.", "directorios.", "ambas cosas." ]
   },
   {
-    "pregunta": "¿Qué se usa para automatizar pruebas?",
-    "opciones": ["Jenkins", "JUnit", "JavaFX"],
-    "respuesta": "JUnit"
+    "pregunta": "¿Qué significa 'refactorización' en el contexto de la programación Java?:",
+    "respuesta": "Mejorar la estructura y diseño del código existente sin cambiar su funcionalidad",
+    "opciones": [
+      "Crear código nuevo desde cero",
+      "Reescribir todo el código existente",
+      "Mejorar la estructura y diseño del código existente sin cambiar su funcionalidad"
+    ]
   },
   {
-    "pregunta": "¿Qué archivo define las dependencias en un proyecto Maven?",
-    "opciones": ["build.gradle", "pom.xml", "settings.xml"],
-    "respuesta": "pom.xml"
+    "pregunta": "Un almacen central de datos es un repositorio que tiene...:",
+    "respuesta": "Subversion.",
+    "opciones": [ "Subversion.", "Git.", "ninguno de los dos." ]
   },
   {
-    "pregunta": "¿Qué es un artefacto en Maven?",
-    "opciones": ["Una herramienta de compilación", "Una versión del proyecto compilado", "Un plugin externo"],
-    "respuesta": "Una versión del proyecto compilado"
+    "pregunta": "¿Cuál es el propósito principal de un repositorio Git?:",
+    "respuesta": "Mantener un historial de cambios y facilitar la colaboración en proyectos",
+    "opciones": [
+      "Almacenar archivos de manera temporal",
+      "Mantener un historial de cambios y facilitar la colaboración en proyectos",
+      "Almacenar solo archivos binarios"
+    ]
   },
   {
-    "pregunta": "¿Qué es GitHub?",
-    "opciones": ["Un lenguaje de programación", "Un sistema operativo", "Una plataforma para alojar repositorios Git"],
-    "respuesta": "Una plataforma para alojar repositorios Git"
+    "pregunta": "¿Cuál es uno de los principales usos de GitHub en la comunidad de desarrollo de software?:",
+    "respuesta": "Compartir y colaborar en proyectos de código abierto",
+    "opciones": [
+      "Almacenar proyectos privados exclusivamente",
+      "Compartir y colaborar en proyectos de código abierto",
+      "Realizar pruebas unitarias de código"
+    ]
   },
   {
-    "pregunta": "¿Qué herramienta permite integración continua con GitHub?",
-    "opciones": ["IntelliJ", "GitLab", "GitHub Actions"],
-    "respuesta": "GitHub Actions"
+    "pregunta": "¿Cuál es el objetivo principal del control de versiones?:",
+    "respuesta": "Rastrear cambios en el código fuente y facilitar la colaboración entre equipos",
+    "opciones": [
+      "Ocultar el código fuente a los desarrolladores",
+      "Rastrear cambios en el código fuente y facilitar la colaboración entre equipos",
+      "Realizar pruebas unitarias en el código"
+    ]
   },
   {
-    "pregunta": "¿Qué significa `ctrl + z` en muchas herramientas?",
-    "opciones": ["Rehacer", "Guardar", "Deshacer"],
-    "respuesta": "Deshacer"
+    "pregunta": "Crear un nuevo método a partir de un fragmento de código de un miembro existente lo realiza la operación...:",
+    "respuesta": "Extraer método.",
+    "opciones": [ "Métodos en línea.", "Extraer método.", "Crear método." ]
   },
   {
-    "pregunta": "¿Cuál es el propósito de `System.out.println()` en Java?",
-    "opciones": ["Leer datos", "Mostrar datos en consola", "Cerrar aplicación"],
-    "respuesta": "Mostrar datos en consola"
+    "pregunta": "En Eclipse, ¿cómo se accede a las herramientas de refactorización?:",
+    "respuesta": "Haciendo clic con el botón derecho en el código fuente y seleccionando 'Refactor'",
+    "opciones": [
+      "A través del menú 'Ayuda'",
+      "Haciendo clic con el botón derecho en el código fuente y seleccionando 'Refactor'",
+      "En el menú 'Archivo' seleccionando 'Nueva Refactorización'"
+    ]
   },
   {
-    "pregunta": "¿Qué hace el método `main()` en Java?",
-    "opciones": ["Es el punto de entrada de ejecución", "Define una interfaz", "Contiene atributos globales"],
-    "respuesta": "Es el punto de entrada de ejecución"
+    "pregunta": "Las áreas conflictivas de la refactorización son...:",
+    "respuesta": "ambas.",
+    "opciones": [ "Las bases de datos.", "ambas.", "los cambios de interfaces." ]
   },
   {
-    "pregunta": "¿Qué significa que un método sea `static`?",
-    "opciones": ["No necesita una instancia para usarse", "Solo se puede usar una vez", "Es abstracto"],
-    "respuesta": "No necesita una instancia para usarse"
+    "pregunta": "En Eclipse, ¿qué función te permite ver los cambios que se aplicarán antes de realizar una refactorización?:",
+    "respuesta": "Vista previa de refactorización",
+    "opciones": [
+      "Vista previa de refactorización",
+      "Revisión de código",
+      "Análisis de impacto"
+    ]
   },
   {
-    "pregunta": "¿Qué es un IDE?",
-    "opciones": ["Un editor de texto plano", "Un entorno que integra herramientas de desarrollo", "Un lenguaje de programación"],
-    "respuesta": "Un entorno que integra herramientas de desarrollo"
+    "pregunta": "¿Qué tipo de refactorización se utiliza para extraer un fragmento de código en un nuevo método para mejorar la reutilización y la legibilidad?:",
+    "respuesta": "Extracción de método",
+    "opciones": [
+      "Extracción de método",
+      "Eliminación de código",
+      "Renombramiento de variables"
+    ]
   },
   {
-    "pregunta": "¿Qué hace un depurador?",
-    "opciones": ["Detecta errores lógicos en tiempo de ejecución", "Compila programas", "Guarda archivos"],
-    "respuesta": "Detecta errores lógicos en tiempo de ejecución"
+    "pregunta": "¿Qué tipo de información debería incluirse en los comentarios del código?:",
+    "respuesta": "Explicaciones claras y concisas sobre el propósito de las funciones y partes del código",
+    "opciones": [
+      "Chistes y anécdotas personales",
+      "Descripciones detalladas de la vida personal del programador",
+      "Explicaciones claras y concisas sobre el propósito de las funciones y partes del código"
+    ]
   },
   {
-    "pregunta": "¿Qué comando en Git crea una nueva rama?",
-    "opciones": ["git new", "git branch", "git clone"],
-    "respuesta": "git branch"
+    "pregunta": "Un conjunto de objetos que comparten los mismos atributos se denomina…:",
+    "respuesta": "clase.",
+    "opciones": [ "clase.", "función.", "programa." ]
   },
   {
-    "pregunta": "¿Para qué sirve el comando `git checkout`?",
-    "opciones": ["Cambiar de rama", "Crear rama", "Eliminar rama"],
-    "respuesta": "Cambiar de rama"
+    "pregunta": "La parte superior de una clase indica…:",
+    "respuesta": "el nombre.",
+    "opciones": [ "el nombre.", "los atributos.", "los métodos." ]
   },
   {
-    "pregunta": "¿Qué indica `HEAD` en Git?",
-    "opciones": ["El primer commit", "La rama principal", "El último commit actual"],
-    "respuesta": "La rama principal"
+    "pregunta": "¿Qué indica la cardinalidad de las relaciones entre clases en UML?",
+    "respuesta": "El grado y nivel de dependencia entre las clases, especificando cuántas instancias de una clase se relacionan con otra.",
+    "opciones": [
+      "El tipo de atributos que tiene cada clase.",
+      "El grado y nivel de dependencia entre las clases, especificando cuántas instancias de una clase se relacionan con otra.",
+      "El tipo de herencia que existe entre las clases."
+    ]
   },
   {
-    "pregunta": "¿Qué comando de Git revierte cambios?",
-    "opciones": ["git revert", "git resume", "git undo"],
-    "respuesta": "git revert"
+    "pregunta": "¿Cuál de las siguientes notaciones de cardinalidad en UML indica que una clase puede relacionarse con cero o más instancias de otra clase?",
+    "respuesta": "0..*",
+    "opciones": [ "0..*", "1..*", "1..1" ]
   },
   {
-    "pregunta": "¿Cuál de estas herramientas no es un sistema de control de versiones?",
-    "opciones": ["Git", "SVN", "MySQL"],
-    "respuesta": "MySQL"
+    "pregunta": "El símbolo ~ en un diagrama de clases representa…:",
+    "respuesta": "La visibilidad del paquete.",
+    "opciones": [
+      "La visibilidad del paquete.",
+      "Que un atributo es público.",
+      "Que un atributo es privado."
+    ]
   },
   {
-    "pregunta": "¿Qué significa `DRY` en desarrollo de software?",
-    "opciones": ["Don’t Repeat Yourself", "Do Repeat Yourself", "Data Repeat Yield"],
-    "respuesta": "Don’t Repeat Yourself"
+    "pregunta": "Si un atributo o método es visible solo dentro de la clase pero pueden acceder sus subclases, este será…:",
+    "respuesta": "protegido.",
+    "opciones": [ "publico.", "protegido.", "privado." ]
   },
   {
-    "pregunta": "¿Qué es una refactorización?",
-    "opciones": ["Modificar código sin cambiar su comportamiento", "Eliminar métodos", "Compilar en otro lenguaje"],
-    "respuesta": "Modificar código sin cambiar su comportamiento"
+    "pregunta": "Si el atributo o método en un diagrama de clase tiene el símbolo - este va a ser…:",
+    "respuesta": "privado.",
+    "opciones": [ "publico.", "protegido.", "privado." ]
   },
   {
-    "pregunta": "¿Qué es un entorno de producción?",
-    "opciones": ["Donde trabajan los desarrolladores", "Donde se prueban funciones", "Donde se usa la aplicación real por los usuarios"],
-    "respuesta": "Donde se usa la aplicación real por los usuarios"
+    "pregunta": "¿Qué representan los elipses en un diagrama de casos de uso?:",
+    "respuesta": "Casos de uso",
+    "opciones": [ "Actores", "Casos de uso", "Relaciones" ]
   },
   {
-    "pregunta": "¿Qué representa un actor en un diagrama de casos de uso?",
-    "opciones": ["Una clase", "Un método", "Un usuario o sistema externo"],
-    "respuesta": "Un usuario o sistema externo"
+    "pregunta": "¿Qué elemento se utiliza para representar una decisión en un diagrama de actividad?:",
+    "respuesta": "Rombo.",
+    "opciones": [ "Flechas.", "Rectángulo con esquinas redondeadas.", "Rombo." ]
   },
   {
-    "pregunta": "¿Qué palabra clave define una clase en Java?",
-    "opciones": ["define", "class", "new"],
-    "respuesta": "class"
+    "pregunta": "¿Qué elemento se utiliza para representar una acción en un diagrama de actividad?:",
+    "respuesta": "Rectángulo con esquinas redondeadas",
+    "opciones": [ "Flechas", "Rombo", "Rectángulo con esquinas redondeadas" ]
   },
   {
-    "pregunta": "¿Qué representa una flecha en un diagrama de secuencia?",
-    "opciones": ["Creación de objetos", "Intercambio de mensajes", "Jerarquía de clases"],
-    "respuesta": "Intercambio de mensajes"
+    "pregunta": "¿Qué representa una elipse en un diagrama de casos de uso?:",
+    "respuesta": "Un caso de uso.",
+    "opciones": [ "Un actor.", "Un caso de uso.", "Una relación de dependencia." ]
   },
   {
-    "pregunta": "¿Qué indica una línea discontinua en UML?",
-    "opciones": ["Herencia", "Interfaz", "Mensaje de retorno"],
-    "respuesta": "Mensaje de retorno"
+    "pregunta": "¿Qué tipo de diagrama se utiliza para mostrar la interacción entre objetos a lo largo del tiempo?:",
+    "respuesta": "Diagrama de secuencia.",
+    "opciones": [
+      "Diagrama de actividad.",
+      "Diagrama de casos de uso.",
+      "Diagrama de secuencia."
+    ]
   },
   {
-    "pregunta": "¿Qué tipo de visibilidad representa `+` en UML?",
-    "opciones": ["Privada", "Protegida", "Pública"],
-    "respuesta": "Pública"
+    "pregunta": "En el diagrama de estados el estado final representa…:",
+    "respuesta": "que un componente ha dejado de tener cualquier interacción o actividad.",
+    "opciones": [
+      "el fin del programa.",
+      "que un componente ha dejado de tener cualquier interacción o actividad.",
+      "que ese estado se destruye."
+    ]
   },
   {
-    "pregunta": "¿Qué permite la modularidad en programación?",
-    "opciones": ["Dividir el programa en partes independientes", "Hacer un solo archivo", "Unir todas las clases en una sola"],
-    "respuesta": "Dividir el programa en partes independientes"
+    "pregunta": "El diagrama UML que muestra el flujo de control entre actividades se denomina…:",
+    "respuesta": "diagrama de actividad.",
+    "opciones": [
+      "diagrama de casos de uso.",
+      "diagrama de secuencia.",
+      "diagrama de actividad."
+    ]
   },
   {
-    "pregunta": "¿Qué es una variable de instancia?",
-    "opciones": ["Se comparte entre todas las instancias", "Pertenece a cada objeto", "Se define como estática"],
-    "respuesta": "Pertenece a cada objeto"
+    "pregunta": "El uso de la notación <<extends>> en el diagrama de casos de uso representa…:",
+    "respuesta": "extensión.",
+    "opciones": [ "extensión.", "exclusión.", "inclusión." ]
   },
   {
-    "pregunta": "¿Qué método se ejecuta primero al iniciar un programa Java?",
-    "opciones": ["run()", "start()", "main()"],
-    "respuesta": "main()"
+    "pregunta": "¿Qué representan las líneas de conexión entre objetos en un diagrama de colaboración?:",
+    "respuesta": "Mensajes",
+    "opciones": [ "Mensajes", "Relaciones de herencia", "Atributos" ]
   },
   {
-    "pregunta": "¿Qué es una excepción controlada (checked exception)?",
-    "opciones": ["Debe manejarse obligatoriamente", "Ocurre en tiempo de ejecución", "Es opcional"],
-    "respuesta": "Debe manejarse obligatoriamente"
+    "pregunta": "¿Qué representa una transición en un diagrama de estados?:",
+    "respuesta": "Un cambio de estado.",
+    "opciones": [
+      "Un mensaje entre objetos.",
+      "Un cambio de estado.",
+      "Una relación de herencia."
+    ]
   },
   {
-    "pregunta": "¿Qué clase permite leer datos desde el teclado en Java?",
-    "opciones": ["BufferedReader", "Scanner", "DataInputStream"],
-    "respuesta": "Scanner"
+    "pregunta": "En el diagrama de estados una operación instantánea asociada a un evento es…:",
+    "respuesta": "una acción.",
+    "opciones": [ "una actividad.", "una acción.", "un estado." ]
   },
   {
-    "pregunta": "¿Qué es un constructor en Java?",
-    "opciones": ["Un método que crea interfaces", "Un método especial que inicializa objetos", "Un atributo de clase"],
-    "respuesta": "Un método especial que inicializa objetos"
+    "pregunta": "¿Qué es un actor en un diagrama de casos de uso?:",
+    "respuesta": "Un rol externo que interactúa con el sistema.",
+    "opciones": [
+      "Una interacción entre objetos.",
+      "Un objeto del sistema.",
+      "Un rol externo que interactúa con el sistema."
+    ]
   },
   {
-    "pregunta": "¿Qué significa sobrecarga de métodos?",
-    "opciones": ["Un método especial que inicializa objetos", "Mismos nombres y mismos parámetros", "Diferentes nombres"],
-    "respuesta": "Un método especial que inicializa objetos"
+    "pregunta": "En los diagramas de casos de uso, las operaciones o tareas específicas del sistema se denominan…:",
+    "respuesta": "casos de uso.",
+    "opciones": [ "casos de uso.", "actividades.", "acciones." ]
   },
   {
-    "pregunta": "¿Qué método se usa para comparar cadenas ignorando mayúsculas?",
-    "opciones": ["equals()", "equalsIgnoreCase()", "compareTo()"],
-    "respuesta": "equalsIgnoreCase()"
+    "pregunta": "El diagrama encargado de modelar la distribución del sistema es…:",
+    "respuesta": "El diagrama de implementación.",
+    "opciones": [
+      "El diagrama de implementación.",
+      "El diagrama de componentes.",
+      "El diagrama de objetos."
+    ]
   },
   {
-    "pregunta": "¿Qué clase en Java representa una fecha sin hora?",
-    "opciones": ["LocalTime", "LocalDate", "Calendar"],
-    "respuesta": "LocalDate"
+    "pregunta": "La refactorización es...:",
+    "respuesta": "Es realizar una transformación al software preservando su comportamiento.",
+    "opciones": [
+      "Es cambiar tanto el código como la funcionalidad del software.",
+      "Es realizar una transformación al software preservando su comportamiento.",
+      "Es cambiar algunas funcionalidades del software."
+    ]
   },
   {
-    "pregunta": "¿Qué hace `setText()` en JavaFX?",
-    "opciones": ["Asigna texto a una etiqueta", "Cierra la ventana", "Ejecuta código Java"],
-    "respuesta": "Asigna texto a una etiqueta"
+    "pregunta": "Realizar una transformación del código sin que cambie el funcionamiento se denomina…:",
+    "respuesta": "refactorización.",
+    "opciones": [ "refactorización.", "recodificación.", "transformación." ]
   },
   {
-    "pregunta": "¿Qué palabra clave se usa para definir una constante?",
-    "opciones": ["var", "const", "final"],
-    "respuesta": "final"
+    "pregunta": "¿Qué tipo de sistema de control de versiones es Mercurial?:",
+    "respuesta": "Distribuido",
+    "opciones": [ "Centralizado", "Distribuido", "Basado en la nube" ]
   },
   {
-    "pregunta": "¿Qué es una interfaz en Java?",
-    "opciones": ["Una clase normal", "Una clase abstracta", "Una colección de métodos sin implementación"],
-    "respuesta": "Una colección de métodos sin implementación"
+    "pregunta": "Los repositorios se utilizan en…:",
+    "respuesta": "Ambas.",
+    "opciones": [ "Git.", "Subversion.", "Ambas." ]
   },
   {
-    "pregunta": "¿Qué clase se usa para mostrar alertas en JavaFX?",
-    "opciones": ["Popup", "Dialog", "Alert"],
-    "respuesta": "Alert"
+    "pregunta": "¿Por qué es importante la documentación en el desarrollo de software?:",
+    "respuesta": "Para facilitar la comprensión, mantenimiento y colaboración en el proyecto",
+    "opciones": [
+      "Para aumentar el tamaño del código fuente",
+      "Para facilitar la comprensión, mantenimiento y colaboración en el proyecto",
+      "Para ocultar información crítica sobre el proyecto"
+    ]
   },
   {
-    "pregunta": "¿Qué representa el patrón MVC?",
-    "opciones": ["Modelo Vista Controlador", "Modelo Variable Código", "Módulo Visual Componente"],
-    "respuesta": "Modelo Vista Controlador"
+    "pregunta": "¿Qué característica distingue a Git de otros sistemas de control de versiones?:",
+    "respuesta": "Git es distribuido",
+    "opciones": [
+      "Git es centralizado",
+      "Git es distribuido",
+      "Git no admite el seguimiento de historiales de cambios"
+    ]
   },
   {
-    "pregunta": "¿Qué método convierte texto en número entero?",
-    "opciones": ["parseInt()", "toInt()", "stringToInt()"],
-    "respuesta": "parseInt()"
+    "pregunta": "¿Cuál es el propósito principal de agregar comentarios al código durante la programación?:",
+    "respuesta": "Explicar el funcionamiento y la lógica del código para futuros desarrolladores",
+    "opciones": [
+      "Ocultar información importante",
+      "Aumentar la confusión en el código",
+      "Explicar el funcionamiento y la lógica del código para futuros desarrolladores"
+    ]
   },
   {
-    "pregunta": "¿Qué comando de Git elimina una rama?",
-    "opciones": ["git remove", "git branch -d", "git delete"],
-    "respuesta": "git branch -d"
+    "pregunta": "¿Cuál de las siguientes afirmaciones es cierta acerca de la refactorización en Java?:",
+    "respuesta": "La refactorización se realiza de manera controlada y sistemática para mejorar el código",
+    "opciones": [
+      "La refactorización siempre introduce nuevos errores en el código",
+      "La refactorización es una práctica que debe evitarse en el desarrollo de software",
+      "La refactorización se realiza de manera controlada y sistemática para mejorar el código"
+    ]
   },
   {
-    "pregunta": "¿Qué representa el archivo `.gitignore`?",
-    "opciones": ["Define las ramas protegidas", "Lista de archivos que no se deben subir al repo", "Contiene el historial de cambios"],
-    "respuesta": "Lista de archivos que no se deben subir al repo"
+    "pregunta": "El uso de la notación <<uses>> o <<include>> en el diagrama de casos de uso representa…:",
+    "respuesta": "inclusión.",
+    "opciones": [ "asociación.", "exclusión.", "inclusión." ]
   },
   {
-    "pregunta": "¿Qué herramienta se usa para subir un proyecto a GitHub?",
-    "opciones": ["Eclipse", "Git", "JavaFX"],
-    "respuesta": "Git"
+    "pregunta": "¿Qué elemento se utiliza para representar un estado inicial en un diagrama de estados?:",
+    "respuesta": "Un pequeño círculo relleno.",
+    "opciones": [
+      "Flechas.",
+      "Rectángulo con esquinas redondeadas.",
+      "Un pequeño círculo relleno."
+    ]
   },
   {
-    "pregunta": "¿Qué lenguaje usa FXML?",
-    "opciones": ["Java", "XML", "JSON"],
-    "respuesta": "XML"
+    "pregunta": "Los usuarios en los diagramas de casos de uso se consideran …:",
+    "respuesta": "actores.",
+    "opciones": [ "actores.", "usuarios.", "personajes." ]
   },
   {
-    "pregunta": "¿Qué permite el diseño modular?",
-    "opciones": ["Separar responsabilidades", "Mezclar capas", "Evitar librerías"],
-    "respuesta": "Separar responsabilidades"
+    "pregunta": "¿Qué elemento se utiliza para representar objetos en un diagrama de colaboración?:",
+    "respuesta": "Rectángulos.",
+    "opciones": [ "Flechas.", "Líneas punteadas.", "Rectángulos." ]
   },
   {
-    "pregunta": "¿Qué operador se usa para concatenar cadenas en Java?",
-    "opciones": ["&", "+", "++"],
-    "respuesta": "+"
+    "pregunta": "Una línea continua entre dos objetos en un diagrama de colaboración representa…:",
+    "respuesta": "un vínculo.",
+    "opciones": [ "un mensaje.", "un objeto.", "un vínculo." ]
   },
   {
-    "pregunta": "¿Qué símbolo se usa en Java para comentarios de una línea?",
-    "opciones": ["//", "#", "/*"],
-    "respuesta": "//"
+    "pregunta": "El diagrama encargado de modelar el paso de mensajes entre objetos es…:",
+    "respuesta": "El diagrama de secuencia.",
+    "opciones": [
+      "El diagrama de casos de uso.",
+      "El diagrama de colaboración.",
+      "El diagrama de secuencia."
+    ]
   },
   {
-    "pregunta": "¿Qué método se usa para imprimir texto en consola en Java?",
-    "opciones": ["print()", "write()", "System.out.println()"],
-    "respuesta": "System.out.println()"
+    "pregunta": "El diagrama de colaboración es un diagrama…:",
+    "respuesta": "de interacción.",
+    "opciones": [ "de clases.", "de casos de uso.", "de interacción." ]
   }
 ]
