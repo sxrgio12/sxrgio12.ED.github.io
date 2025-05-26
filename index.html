@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <!-- saved from url=(0024)https://si.codingia.com/ -->
-<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ENTORNOS DE DESARROLLO - TEST</title>
   <style>
@@ -94,74 +96,165 @@
       color: #555;
       text-align: center;
     }
+
+    .question-item {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .question-item h3 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .question-item ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .question-item li {
+      padding: 0.3rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    .question-item li.correct {
+      background: #d4edda;
+    }
+
+    /* verde suave */
+    .question-item li.hidden {
+      display: none;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    #reiniciar {
+      background: #dc3545;
+      margin-top: 0.5rem;
+    }
+
+    #reiniciar:hover {
+      background: #a71d2a;
+    }
   </style>
 </head>
 
 <body>
-  <div class="card">
-    <h2 id="pregunta">¿Qué representa un IDE?</h2>
-    <div id="opciones">
-    <label class="option">
-      <input type="radio" name="opcion" value="Red de área metropolitana o MAN"> Una base de datos
-    </label>
-  
-    <label class="option">
-      <input type="radio" name="opcion" value="Red de área extensa o WAN"> Un entorno de desarrollo integrado
-    </label>
-  
-    <label class="option">
-      <input type="radio" name="opcion" value="Red de área local o LAN"> Un lenguaje de programación
-    </label>
+  <div style="display:flex; flex-direction: column">
+    <div class="card">
+      <h2 id="pregunta">Las mejores pruebas para realizar mientras estamos refactorizando son…:</h2>
+      <div id="opciones">
+        <label class="option">
+          <input type="radio" name="opcion" value=""
+            data-texto="Las pruebas unitarias."> Las pruebas unitarias.</label>
+        <label class="option">
+          <input type="radio" name="opcion" value=""
+            data-texto="Ninguna de las dos, da igual."> Ninguna de las dos, da igual.</label>
+        <label class="option"><input type="radio" name="opcion" value=""
+            data-texto="Las pruebas de integración.">
+          Las pruebas de integración.</label></div>
+      <button onclick="siguiente()" style="display: inline-block;">Corregir</button>
+      <button id="reiniciar" onclick="reiniciarEstadisticas()">Reiniciar estadísticas</button>
+      <div id="resultado"></div>
+      <div class="estadisticas" id="estadisticas">✅ Aciertos: 0 | ❌ Fallos: 0 | 🎯 Porcentaje: 0% | 📋 Total: 289
+        preguntas</div>
+    </div>
+    <div class="card">
+      <h2>Listado de preguntas</h2>
+      <input type="text" id="search" placeholder="Busca aquí…"
+        style="width:100%; padding:0.8rem; margin-bottom:1rem; border-radius:6px; border:1px solid #ccc;">
+        </div>
   </div>
-    <button onclick="siguiente()" style="display: inline-block;">Corregir</button>
-    <div id="resultado"></div>
-    <div class="estadisticas" id="estadisticas">✅ Aciertos: 3 | ❌ Fallos: 3 | 🎯 Porcentaje: 50% | 📋 Total: 126 preguntas</div>
-  </div>
+
 
   <script>
     let totalPreguntasTotales = 0;
-    let preguntasOriginales = [];
-    let preguntas = [];
-    let falladas = [];
-    let index = 0;
-    let repeticionesFallos = {};
-    let aciertos = 0;
-    let totalRespondidas = 0;
-
-    function normalizar(texto) {
-      return texto.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
-    }
-
-    function mezclar(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-    }
-
-    function actualizarEstadisticas() {
-  const porcentaje = totalRespondidas > 0 ? Math.round((aciertos / totalRespondidas) * 100) : 0;
-  document.getElementById("estadisticas").innerText =
-    `✅ Aciertos: ${aciertos} | ❌ Fallos: ${totalRespondidas - aciertos} | 🎯 Porcentaje: ${porcentaje}% | 📋 Total: ${totalPreguntasTotales} preguntas`;
+let preguntasOriginales = [];
+let preguntas = [];
+let falladas = [];
+let index = 0;
+let repeticionesFallos = {};
+let aciertos = 0;
+let totalRespondidas = 0;
+function escaparHTML(texto) {
+    return texto
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
 }
 
-    function guardarProgreso() {
-      const estado = {
+function normalizar(texto) {
+    return texto
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")  // Elimina acentos
+        .replace(/\n/g, "")              // Reemplaza saltos de línea con espacios
+        .replace(/\s+/g, " ")             // Colapsa múltiples espacios en uno solo
+        .trim();                          // Elimina espacios al inicio/final
+}
+
+/**
+ * Valida si una respuesta es correcta para una pregunta dada.
+ * @param {string} respuestaUsuario - Respuesta proporcionada por el usuario.
+ * @param {string} respuestaCorrecta - Respuesta correcta de la pregunta.
+ * @returns {boolean} - `true` si la respuesta es correcta, `false` en caso contrario.
+ */
+function esRespuestaCorrecta(respuestaUsuario, pregunta) {
+    const opcionCorrecta = pregunta.opciones[pregunta.respuesta_correcta_index];
+    return respuestaUsuario === opcionCorrecta;
+}
+
+function renderQuestionList() {
+    const cont = document.getElementById('question-list');
+    cont.innerHTML = preguntasOriginales.map((p, i) => {
+        const opciones = p.opciones.map((op, opIndex) =>
+            `<li class="${opIndex === p.respuesta_correcta_index ? 'correct' : ''}">${op}</li>`
+        ).join('');
+
+        return `
+<div class="question-item" data-text="${normalizar(escaparHTML(p.pregunta) + ' ' + p.opciones.join(' ') + ' ' + p.respuesta)}">
+<h3>${i + 1}. ${p.pregunta}</h3>
+<ul>${opciones}</ul>
+</div>
+`;
+    }).join('');
+}
+
+function mezclar(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+function actualizarEstadisticas() {
+    const porcentaje = totalRespondidas > 0 ? Math.round((aciertos / totalRespondidas) * 100) : 0;
+    document.getElementById("estadisticas").innerText =
+        `✅ Aciertos: ${aciertos} | ❌ Fallos: ${totalRespondidas - aciertos} | 🎯 Porcentaje: ${porcentaje}% | 📋 Total: ${totalPreguntasTotales} preguntas`;
+}
+
+function guardarProgreso() {
+    const estado = {
         preguntas,
         falladas,
         index,
         repeticionesFallos,
         aciertos,
         totalRespondidas
-      };
-      localStorage.setItem("testSQL", JSON.stringify(estado));
-    }
+    };
+    localStorage.setItem("testSQL", JSON.stringify(estado));
+}
 
-    function cargarProgreso() {
-      const guardado = localStorage.getItem("testSQL");
-      if (!guardado) return false;
+function cargarProgreso() {
+    const guardado = localStorage.getItem("testSQL");
+    if (!guardado) return false;
 
-      try {
+    try {
         const estado = JSON.parse(guardado);
         preguntas = estado.preguntas;
         falladas = estado.falladas;
@@ -170,143 +263,179 @@
         aciertos = estado.aciertos;
         totalRespondidas = estado.totalRespondidas;
         return true;
-      } catch {
+    } catch {
         return false;
-      }
+    }
+}
+
+function cargarPregunta() {
+    if (index >= preguntas.length) {
+        document.getElementById("pregunta").innerText = "🎉 ¡Test finalizado!";
+        document.getElementById("opciones").innerHTML = "";
+        document.querySelector("button").style.display = "none";
+        document.getElementById("resultado").innerText = "Buen trabajo.";
+        localStorage.removeItem("testSQL");
+        actualizarEstadisticas();
+        return;
     }
 
-    function cargarPregunta() {
-      if (index >= preguntas.length) {
-        if (falladas.length > 0) {
-          preguntas = falladas.flatMap(p => Array((repeticionesFallos[p.pregunta] || 1) + 1).fill(p));
-          mezclar(preguntas);
-          falladas = [];
-          index = 0;
-          document.getElementById("resultado").innerText = "¡Repasemos las que fallaste!";
-          document.getElementById("resultado").className = "";
-        } else {
-          document.getElementById("pregunta").innerText = "🎉 ¡Test finalizado!";
-          document.getElementById("opciones").innerHTML = "";
-          document.querySelector("button").style.display = "none";
-          document.getElementById("resultado").innerText = "Buen trabajo.";
-          localStorage.removeItem("testSQL");
-          actualizarEstadisticas();
-          return;
-        }
-      }
+    const p = preguntas[index];
+    document.getElementById("pregunta").textContent = p.pregunta;
+    const opcionesMezcladas = [...p.opciones];
+    mezclar(opcionesMezcladas);
 
-      const p = preguntas[index];
-      document.getElementById("pregunta").innerText = p.pregunta;
+    const contenedor = document.getElementById("opciones");
+    contenedor.innerHTML = "";
+    opcionesMezcladas.forEach(opcion => {
+        const label = document.createElement("label");
+        label.className = "option";
+        const input = document.createElement("input");
+        input.type = "radio";
+        input.name = "opcion";
+        input.value = "";
+        input.setAttribute("data-texto", opcion);
+        label.appendChild(input);
+        label.appendChild(document.createTextNode(" " + opcion));
+        contenedor.appendChild(label);
+    });
 
-      const opcionesMezcladas = [...p.opciones];
-      mezclar(opcionesMezcladas); // 🌀 Mezcla el orden de las opciones
+    const btn = document.querySelector("button");
+    btn.style.display = "inline-block";
+    btn.innerText = "Corregir";
+    btn.disabled = false;
+    document.getElementById("resultado").innerText = "";
+    estadoBoton = "corregir";
+}
 
-      document.getElementById("opciones").innerHTML = opcionesMezcladas.map(opcion => `
-    <label class="option">
-      <input type="radio" name="opcion" value="${opcion}"/> ${opcion}
-    </label>
-  `).join('');
+let estadoBoton = "corregir"; // "corregir" o "siguiente"
 
-      document.querySelector("button").style.display = "inline-block";
-      document.getElementById("resultado").innerText = "";
-      const btn = document.querySelector("button");
-      btn.style.display = "inline-block";
-      btn.innerText = "Corregir";
-      btn.disabled = false;
-      estadoBoton = "corregir";
-    }
-
-
-    let estadoBoton = "corregir"; // "corregir" o "siguiente"
-
-    function siguiente() {
-      const btn = document.querySelector("button");
-
-      if (estadoBoton === "corregir") {
+function siguiente() {
+    const btn = document.querySelector("button");
+    if (estadoBoton === "corregir") {
         const seleccionada = document.querySelector('input[name="opcion"]:checked');
         if (!seleccionada) {
-          alert("Selecciona una opción.");
-          return;
+            alert("Selecciona una opción.");
+            return;
         }
 
-        const respuesta = seleccionada.value;
-        const correcta = preguntas[index].respuesta;
-        const normalizadaCorrecta = normalizar(correcta);
-        const normalizadaRespuesta = normalizar(respuesta);
-
+        const respuesta = seleccionada.dataset.texto;
+        const preguntaActual = preguntas[index];
         totalRespondidas++;
 
-        if (normalizadaCorrecta === normalizadaRespuesta) {
-          aciertos++;
-          document.getElementById("resultado").innerText = "✅ Correcto";
-          document.getElementById("resultado").className = "correcto";
+        if (esRespuestaCorrecta(respuesta, preguntaActual)) {
+            aciertos++;
+            document.getElementById("resultado").innerText = "✅ Correcto";
+            document.getElementById("resultado").className = "correcto";
         } else {
-          document.getElementById("resultado").innerText = `❌ Incorrecto. Era: ${correcta}`;
-          document.getElementById("resultado").className = "incorrecto";
-          if (!falladas.some(p => p.pregunta === preguntas[index].pregunta)) {
-            falladas.push(preguntas[index]);
-            repeticionesFallos[preguntas[index].pregunta] = 1;
-          } else {
-            repeticionesFallos[preguntas[index].pregunta]++;
-          }
+            const opcionCorrecta = preguntaActual.opciones[preguntaActual.respuesta_correcta_index];
+            document.getElementById("resultado").innerText = `❌ Incorrecto. Era: ${opcionCorrecta}`;
+            document.getElementById("resultado").className = "incorrecto";
+            const fallada = preguntas[index];
+            const repeticiones = (repeticionesFallos[fallada.pregunta] || 0) + 1;
+            repeticionesFallos[fallada.pregunta] = repeticiones;
+            for (let i = 0; i < Math.min(repeticiones, 3); i++) {
+                const posicion = index + 2 + Math.floor(Math.random() * 3);
+                preguntas.splice(Math.min(posicion, preguntas.length), 0, fallada);
+            }
         }
 
         actualizarEstadisticas();
         guardarProgreso();
-
         btn.innerText = "Siguiente";
         estadoBoton = "siguiente";
-
-        // Desactiva inputs para evitar cambiar de opción tras corregir
         document.querySelectorAll('input[name="opcion"]').forEach(input => input.disabled = true);
-
-      } else if (estadoBoton === "siguiente") {
+    } else {
         index++;
         cargarPregunta();
-      }
     }
+}
 
-   async function iniciarTest() {
-  try {
-    const res = await fetch("preguntased.json");
-    preguntasOriginales = await res.json();
-    totalPreguntasTotales = preguntasOriginales.length;
+function reiniciarEstadisticas() {
+    localStorage.removeItem("testSQL");
 
-    const guardado = localStorage.getItem("testSQL");
-    if (guardado) {
-      const estado = JSON.parse(guardado);
+    // Resetear variables
+    preguntas = [...preguntasOriginales];
+    falladas = [];
+    index = 0;
+    repeticionesFallos = {};
+    aciertos = 0;
+    totalRespondidas = 0;
 
-      // Cargamos progreso anterior
-      preguntas = estado.preguntas;
-      falladas = estado.falladas;
-      index = estado.index;
-      repeticionesFallos = estado.repeticionesFallos;
-      aciertos = estado.aciertos;
-      totalRespondidas = estado.totalRespondidas;
-
-      // Añadir nuevas preguntas si hay más en el JSON
-      const todasGuardadas = [...preguntas, ...falladas].map(p => p.pregunta);
-      const nuevas = preguntasOriginales.filter(p => !todasGuardadas.includes(p.pregunta));
-
-      if (nuevas.length > 0) {
-        preguntas = preguntas.concat(nuevas);
-        mezclar(preguntas); // Opcional: vuelve a mezclar para no poner nuevas al final
-      }
-
-    } else {
-      preguntas = [...preguntasOriginales];
-      mezclar(preguntas);
-    }
-
+    mezclar(preguntas);
     cargarPregunta();
     actualizarEstadisticas();
-  } catch (error) {
-    document.getElementById("pregunta").innerText = "Error al cargar preguntas.json";
-    console.error(error);
-  }
+
+    document.getElementById("resultado").innerText = "📊 Estadísticas reiniciadas";
+    document.getElementById("resultado").className = "";
 }
-    iniciarTest();
+
+async function iniciarTest() {
+    try {
+        const res = await fetch("preguntas.json");
+        preguntasOriginales = await res.json();
+
+        preguntasOriginales = preguntasOriginales.map(pregunta => {
+            const respuestaNormalizada = normalizar(pregunta.respuesta);
+            const respuestaCorrectaIndex = pregunta.opciones.findIndex(op =>
+                normalizar(op) === respuestaNormalizada
+            );
+
+            if (respuestaCorrectaIndex === -1) {
+                console.warn(`⚠️ No se encontró la respuesta correcta en las opciones para la pregunta: "${pregunta.pregunta}"`);
+                console.warn("Respuesta normalizada:", `"${respuestaNormalizada}"`);
+                console.warn("Opciones normalizadas:", pregunta.opciones.map(op => `"${normalizar(op)}"`));
+            }
+
+            return { ...pregunta, respuesta_correcta_index: respuestaCorrectaIndex >= 0 ? respuestaCorrectaIndex : 0 };
+        });
+
+        totalPreguntasTotales = preguntasOriginales.length;
+
+        const guardado = localStorage.getItem("testSQL");
+        if (guardado) {
+            const estado = JSON.parse(guardado);
+            preguntas = estado.preguntas;
+            falladas = estado.falladas;
+            index = estado.index;
+            repeticionesFallos = estado.repeticionesFallos;
+            aciertos = estado.aciertos;
+            totalRespondidas = estado.totalRespondidas;
+
+            // Añadir nuevas preguntas si hay más en el JSON
+            const todasGuardadas = [...preguntas, ...falladas].map(p => p.pregunta);
+            const nuevas = preguntasOriginales.filter(p => !todasGuardadas.includes(p.pregunta));
+
+            if (nuevas.length > 0) {
+                preguntas = preguntas.concat(nuevas);
+                mezclar(preguntas);
+            }
+        } else {
+            preguntas = [...preguntasOriginales];
+            mezclar(preguntas);
+        }
+
+        cargarPregunta();
+        actualizarEstadisticas();
+        renderQuestionList();
+    } catch (error) {
+        console.error("Error al cargar preguntas.json:", error);
+    }
+}
+iniciarTest();
+
+document.getElementById('search').addEventListener('keyup', e => {
+
+    const term = normalizar(e.target.value);
+    document.querySelectorAll('.question-item').forEach(item => {
+        const hay = item.getAttribute('data-text').includes(term);
+
+        item.classList.toggle('hidden', !hay);
+    });
+});
+
   </script>
 
 
-</body></html>
+</body>
+
+</html>
